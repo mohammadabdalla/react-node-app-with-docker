@@ -1,16 +1,16 @@
 version: "3.8"
 services:
   frontend:
-    build: ./api
-    container_name: api_c
+    build: ./backend
+    container_name: backend_C
     ports:
       - '4000:4000'
     volumes:
       - ./api:/app
       - ./app/node_modules
   backend:
-    build: ./myblog
-    container_name: myblog_c
+    build: ./frontend
+    container_name: frontend_c
     ports:
       - '3000:3000'
     stdin_open: true
